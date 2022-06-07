@@ -109,6 +109,7 @@ class UsuarioController extends Controller
 
         $user = new Usuario ($request->all());
         $user->password = bcrypt($request->password);
+        $user->rol_id = 5;
         $user->save();
 
         return redirect()->route('inicio')->with('usuario', 'usuario creado');;
