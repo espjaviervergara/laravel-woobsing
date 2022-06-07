@@ -28,12 +28,10 @@ class Usuario extends Model
         'email_verified_at' => 'datetime',
     ];
 
+    // -	Un usuario puede tener un solo rol.
     public function rol()
     {
         return $this->belongsTo(Rol::class, 'rol_id');
     }
-
-
-
 
 }
